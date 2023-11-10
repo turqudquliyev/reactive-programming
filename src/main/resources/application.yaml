@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/app_db
+    username: root
+    password: password
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yaml
+    url: jdbc:postgresql://localhost:5432/app_db
+    user: root
+    password: password
